@@ -1,9 +1,9 @@
-import React from 'react'
+import './TodoSearch.css'
 
 export const TodoSearch = () => {
   return (
     <div>
-      <input placeholder="cebolla"/>
+      <input className="TodoSearch" placeholder="cebolla"/>
     </div>
   )
 }

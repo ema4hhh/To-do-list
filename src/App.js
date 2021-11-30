@@ -6,7 +6,7 @@ import { TodoList } from './TodoList.jsx';
 import { TodoSearch } from './TodoSearch.jsx';
 
 var todos = [
-  {text: "hacer la tarea1", status: false},
+  {text: "hacer la tarea1", status: true},
   {text: "hacer la tarea2", status: false},
   {text: "hacer la tarea3", status: false},
 ];
@@ -19,7 +19,11 @@ function App() {
       <TodoSearch />
       <TodoList >
         {todos.map(todo => (
-          <TodoItem key={todo.text  } text={todo.text} />
+          <TodoItem 
+          key={todo.text}
+          text={todo.text} 
+          completed={todo.status}
+          />
         ))}
       </TodoList>
       <CreateTodoButton />
