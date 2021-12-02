@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
-  color: #1E1E1F;
+  background: #2c0231;
+  color: #1e1f1f;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.zLKIPBEGf8k31N0AgKvFsQHaEo%26pid%3DApi&f=1')
 }
 
 #root {

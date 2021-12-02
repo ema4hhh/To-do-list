@@ -1,11 +1,25 @@
+@keyframes trash-animation {
+    0% {transform: rotate(10deg) scale(1.1);}
+    25% {transform: rotate(-10deg) scale(1.1);}
+    50% {transform: rotate(10deg) scale(1.1);}
+    75% {transform: rotate(-10deg);}
+    95% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
 .TodoItem {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 24px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    margin-top: 26px;
+    box-shadow: 0px 5px 30px #a207b5;
+    border-radius: 5px;
+}
+.TodoItem:hover {
+    transform: scale(1.01);
+    transition: 0.2s ease-out;
 }
   
 .TodoItem-p {
@@ -28,12 +42,15 @@
     width: 48px;
     font-size: 24px;
     font-weight: bold;
-    /* background-color: #CCC; */
 }
   
 .Icon-check {
     position: absolute;
     left: 12px;
+}
+.Icon-check:hover {
+    transform: scale(1.15);
+    transition: 0.2s ease-out;
 }
 .Icon-check--active {
     color: #4caf50;
@@ -41,9 +58,10 @@
   
 .Icon-delete {
     position: absolute;
-    top: -24px;
-    right: 0;
+    top: -8px;
+    right: -10px;
 }
 .Icon-delete:hover {
-    color: red;
+    animation-name: trash-animation;
+    animation-duration: 1.6s;
 }
