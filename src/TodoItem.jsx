@@ -1,26 +1,20 @@
-import './TodoItem.css'
+import "./TodoItem.css";
 
 export const TodoItem = (props) => {
-
-    return (
-        <li className="TodoItem">
-          <span 
-            className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-            onClick={() => props.onComplete()}
-            >
-            √
-          </span>
-          <p 
-            className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}
-          >
-            {props.text}
-          </p>
-          <span 
-            className="Icon Icon-delete"
-            onClick={() => props.onDelete()}
-            >
-           🗑️
-          </span>
-        </li>
-    );
-}
+  return (
+    <li className="TodoItem">
+      <span
+        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
+        onClick={() => props.onComplete()}
+      >
+        √
+      </span>
+      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
+        {props.text}
+      </p>
+      <span className="Icon Icon-delete" onClick={() => props.onDelete()}>
+        🗑️
+      </span>
+    </li>
+  );
+};

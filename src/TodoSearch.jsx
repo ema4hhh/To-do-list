@@ -3,6 +3,7 @@ import './TodoSearch.css'
 
 export const TodoSearch = ({ search, setSearch }) => {
   const [isActive, setIsActive] = useState(false);
+  // eslint-disable-next-line
   const [value, setValue] = useState('');
 
   const onSearch = (event) => {
@@ -29,7 +30,7 @@ export const TodoSearch = ({ search, setSearch }) => {
         }}
       />
       <label className={ isActive ? "Active" : ""} htmlFor="input">
-        What will we do next?
+        Look for a messy task!
       </label>
     </div>
   )
