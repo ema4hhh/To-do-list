@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import './TodoSearch.css'
 
-export const TodoSearch = () => {
+export const TodoSearch = ({ search, setSearch }) => {
   const [isActive, setIsActive] = useState(false);
   const [value, setValue] = useState('');
 
-  function handleTextChange(text) {
+  const onSearch = (event) => {
+    setSearch(event.target.value);
+  }
+  const handleTextChange = (text) => {
     setValue(text);
 
     if (text !== '') {
@@ -19,8 +22,11 @@ export const TodoSearch = () => {
       <input
         id="input"
         type="text"
-        value={value}
-        onChange={(e) => handleTextChange(e.target.value)}
+        value={search}
+        onChange={(e) => {
+          handleTextChange(e.target.value)
+          onSearch(e)
+        }}
       />
       <label className={ isActive ? "Active" : ""} htmlFor="input">
         What will we do next?
