@@ -23,3 +23,9 @@
   .CreateTodoButton:hover {
     transform: rotate(224deg);
   }
+
+.addTask {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
