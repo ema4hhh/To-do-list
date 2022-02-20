@@ -43,7 +43,7 @@ function AppUI({
         ))}
       </TodoList>
       <CreateTodoButton 
-        onAdd={onAdd}
+        onAdd={onAdd()}
       />
     </div>
   )

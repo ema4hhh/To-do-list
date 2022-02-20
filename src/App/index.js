@@ -83,6 +83,9 @@ function App() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
+  const addTodo = (text) => {
+    console.log(text);
+  };
 
   return (
     <div>
@@ -91,11 +94,12 @@ function App() {
         error={error}
         totalTodos={totalTodos}
         completedTodos={completedTodos}
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
+        search={searchValue}
+        setSearch={setSearchValue}
         searchedTodos={searchedTodos}
         completeTodo={completeTodo}
         deleteTodo={deleteTodo}
+        addTodo={addTodo}
       />
     </div>
   );

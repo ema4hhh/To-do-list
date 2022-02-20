@@ -14,7 +14,7 @@ export const CreateTodoButton = (props) => {
         <button
           className="CreateTodoButton"
           id="CreateTodoButton"
-          onClick= {() => props.onAdd(document.getElementById("addTodo").value)}
+          onClick= {() => (props.onAdd(document.getElementById("addTodo").value))}
         >
           +
         </button>
