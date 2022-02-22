@@ -1,31 +1,20 @@
-import { useState } from "react";
 import "./CreateTodoButton.css";
 
-export const CreateTodoButton = (props) => {
-  const [addTodo, setAddTodo] = useState('');
-
-  const handleChange = (text) => {
-    setAddTodo(text);
+export const CreateTodoButton = ({ openModal, setOpenModal }) => {
+  const onClickButton = () => {
+    openModal ? setOpenModal(false) : setOpenModal(true)
   }
-
   return (
     <>
       <div>
         <button
           className="CreateTodoButton"
           id="CreateTodoButton"
-          onClick= {() => (props.onAdd(document.getElementById("addTodo").value))}
+          onClick={onClickButton}
         >
           +
         </button>
       </div>
-      <input
-        className="addTask"
-        id="addTodo"
-        onChange = {(e) => handleChange(e.target.value)}
-        value = {addTodo}
-        placeholder = "Add your task here!"
-      />
     </>
   );
 };

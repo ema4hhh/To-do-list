@@ -1,37 +1,38 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoSearch.css'
 
-export const TodoSearch = ({ search, setSearch }) => {
+function TodoSearch() {
   const [isActive, setIsActive] = useState(false);
-  // eslint-disable-next-line
-  const [value, setValue] = useState('');
+  const {searchValue, setSearchValue} = useContext(TodoContext);
 
-  const onSearch = (event) => {
-    setSearch(event.target.value);
+  const onSearchValueChange = (event) => {
+    setSearchValue(event.target.value);
   }
   const handleTextChange = (text) => {
-    setValue(text);
-
     if (text !== '') {
       setIsActive(true);
     } else {
       setIsActive(false);
     }
   }
+
   return (
-    <div id="float-label">
+    <div id='float-label'>
       <input
-        id="input"
-        type="text"
-        value={search}
+        id='input'
+        className="TodoSearch" 
+        value={searchValue}
         onChange={(e) => {
           handleTextChange(e.target.value)
-          onSearch(e)
+          onSearchValueChange(e)
         }}
       />
-      <label className={ isActive ? "Active" : ""} htmlFor="input">
-        Look for a messy task!
+      <label className={ isActive ? "Active" : ""} htmlFor='input'>
+        Find your to-do
       </label>
     </div>
   )
 }
+
+export {TodoSearch};
