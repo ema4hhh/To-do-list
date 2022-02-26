@@ -1,13 +1,8 @@
-import React from "react";
-import { TodoProvider } from "../TodoContext";
-import { AppUI } from "./AppUI";
-
-function App() {
-  return (
-    <TodoProvider>
-      <AppUI/>
-    </TodoProvider>
-  );
-}
-
-export default App;
+export * from '../CreateTodoButton'
+export * from '../Modal'
+export * from '../TodoContext'
+export * from '../TodoCounter'
+export * from '../TodoForm'
+export * from '../TodoItem'
+export * from '../TodoList'
+export * from '../TodoSearch'

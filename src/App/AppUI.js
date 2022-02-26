@@ -1,12 +1,6 @@
 import React, { useContext } from "react";
-import { TodoContext } from "../TodoContext/index.jsx";
-import { CreateTodoButton } from "../CreateTodoButton/index.jsx";
-import { TodoCounter } from "../TodoCounter/index.jsx";
-import { TodoItem } from "../TodoItem/index.jsx";
-import { TodoList } from "../TodoList/index.jsx";
-import { TodoSearch } from "../TodoSearch/index.jsx";
-import { Modal } from '../Modal';
-import { TodoForm } from '../TodoForm'
+
+import { CreateTodoButton, Modal, TodoContext, TodoCounter, TodoForm, TodoItem, TodoList, TodoSearch } from './index.js';
 
 function AppUI() {
   const {
