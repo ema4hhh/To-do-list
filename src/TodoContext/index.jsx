@@ -6,7 +6,7 @@ const TodoContext = createContext();
 function TodoProvider(props) {
   const {
     item: todos,
-    saveItem: saveTodos,
+    saveTodos,
     loading,
     error,
   } = useLocalStorage("TODOS_V1", []);
@@ -42,9 +42,19 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
+  
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text
+    })
+    saveTodos(newTodos);
+  };
 
   return(
     <TodoContext.Provider value={{
+      addTodo,
       loading,
       error,
       totalTodos,
