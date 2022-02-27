@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { TodoContext } from '../TodoContext';
 import './TodoSearch.css'
 
-function TodoSearch() {
+function TodoSearch({ placeHolder }) {
   const [isActive, setIsActive] = useState(false);
   const {searchValue, setSearchValue} = useContext(TodoContext);
 
@@ -29,7 +29,7 @@ function TodoSearch() {
         }}
       />
       <label className={ isActive ? "Active" : ""} htmlFor='input'>
-        Find your to-do
+        {placeHolder === 'Add your first to-do' ? 'Search your to-do here' : 'Write here "' + placeHolder + '"'}
       </label>
     </div>
   )

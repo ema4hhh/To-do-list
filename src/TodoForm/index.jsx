@@ -25,12 +25,12 @@ const TodoForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} >
-      <label>Escribe tu nuevo To Do</label>
+    <form onSubmit={onSubmit}>
+      <label>Write your new to-do</label>
       <textarea
         value = {newTodoValue}
         onChange = {onChange}
-        placeholder = "Escribe una nueva tarea"
+        placeholder = "..."
       />
       <div className="TodoForm-buttonContainer">
         <button
@@ -38,14 +38,14 @@ const TodoForm = () => {
           className="TodoForm-button TodoForm-button-cancel"
           onClick = {onCancel}
         >
-          Cancelar
+          Cancel
         </button>
 
         <button
           className="TodoForm-button TodoForm-button-add"
           type= "submit"
         >
-          Añadir
+          Add
           </button>
       </div>
     </form>
