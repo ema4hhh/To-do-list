@@ -4,7 +4,7 @@ body {
   background: #2c0231;
   color: #1e1f1f;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  background-image: url('Simple Shiny.svg')
+  background-image: url('./assets/Simple\ Shiny.svg')
 }
 #root {
   margin: 0 24px;
