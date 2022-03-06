@@ -1,5 +1,9 @@
 <h1 align="center" id="general-info">To-do list</h1>
 
+
+https://user-images.githubusercontent.com/91023424/156937999-a9e2b736-ade7-4c77-9d92-e7e42abefd73.mp4
+
+
 _This project was created using [create-react-app](https://create-react-app.dev)._
 
 <br/>
